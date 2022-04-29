@@ -86,6 +86,9 @@
         right: 0;
         transition: .25s;
     }
+    .header .link-btn{
+        margin-top: 5px;
+    }
     .header .menu-ico{
         display: block;
         background: #1e1e30;
@@ -93,5 +96,8 @@
         font-size: 25px;
         border: none;
         padding: 8px 8px 2px 8px;;
+    }
+    .login-btn{
+        margin-top: 10px;
     }
 }
