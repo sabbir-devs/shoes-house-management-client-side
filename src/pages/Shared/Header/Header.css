@@ -75,7 +75,7 @@ a:hover{
         padding: 20px;
         background: #1e1e30;
         position: absolute;
-        top: -200px;
+        top: -2000px;
         right: 0;
         transition: .25s;
     }
@@ -99,7 +99,7 @@ a:hover{
         color: #fff;
         font-size: 25px;
         border: none;
-        padding: 8px 8px 2px 8px;;
+        padding: 2px 8px 2px 8px;;
     }
     .login-btn{
         margin-top: 10px;
