@@ -4,7 +4,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 4%;
-
+}
+a:hover{
+    color: #fff;
 }
 .header h1{
     background: linear-gradient(to left, #5f4fe4, #c950e5);
@@ -42,7 +44,6 @@
 .active::after{
     transform: scaleX(1);
 }
-
 .login-btn{
     color: #fff;
     font-size: 16px;
@@ -52,6 +53,9 @@
     background: #353444;
     border-radius:2px;
     margin-left: 5px;
+}
+.login-btn:hover{
+    box-shadow: 0 0 10px 1px #c950e5;
 }
 .header .menu-ico{
     display: none;
