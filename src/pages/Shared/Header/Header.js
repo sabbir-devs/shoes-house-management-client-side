@@ -25,11 +25,11 @@ const Header = () => {
       <div>
         <nav className={openNav ? " nav-close":"nav-open"}>
           <NavLink className="link-btn" to="/">Home</NavLink>
-          <NavLink className="link-btn" to="/mypage">My Page</NavLink>
           {user && 
             <>
-              <NavLink className="link-btn" to="/mypage">My produc</NavLink>
-            <NavLink className="link-btn" to="/mypage">My shoes</NavLink>
+              <NavLink className="link-btn" to="/manageitems">Manage Items</NavLink>
+              <NavLink className="link-btn" to="/additems">Add Item</NavLink>
+              <NavLink className="link-btn" to="/myitems">My items</NavLink>
             </>
           }
           <NavLink className="link-btn" to="/blogs">Blogs</NavLink>

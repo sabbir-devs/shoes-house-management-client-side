@@ -1,10 +1,11 @@
 import React from 'react';
 import './NotFound.css';
+import errorBaner from '../../../images/404.jpg'
 
 const NotFound = () => {
     return (
         <div className='not-found'>
-            <h1>Not Found</h1>
+            <img src={errorBaner} alt="" />
         </div>
     );
 };
