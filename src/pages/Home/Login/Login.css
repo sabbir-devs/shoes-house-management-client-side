@@ -1,6 +1,12 @@
 .shadow{
     text-decoration: underline;
 }
+.error-text{
+    font-size: 13px;
+    color: #c72020;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
 .shadow:hover{
     text-shadow: 0  0 .5px #4335db;
     color: #c950e5;

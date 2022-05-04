@@ -6,3 +6,9 @@
     justify-content: center;
     color: #fff;
 }
+.error-text{
+    font-size: 13px;
+    color: #c72020;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
