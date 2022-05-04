@@ -1,9 +1,7 @@
 import React from 'react';
 import './Shoes.css';
 
-const shoes = [
-    {name:''}
-]
+
 
 const Shoes = () => {
     return (

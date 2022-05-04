@@ -5,6 +5,9 @@
     justify-content: space-between;
     padding: 20px 4%;
 }
+a{
+    text-decoration: none;
+}
 a:hover{
     color: #fff;
 }
@@ -12,6 +15,7 @@ a:hover{
     background: linear-gradient(to left, #5f4fe4, #c950e5);
     background-clip: text;
     color: transparent;
+    cursor: pointer;
 }
 .header nav{
     display: flex;

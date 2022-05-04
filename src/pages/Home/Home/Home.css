@@ -58,7 +58,8 @@
 /*----------------------------------- Media Quary For Responsive Website -----------------------------------*/
 @media only screen and (max-width:688px) {
     .top-banner{
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-items: center;
     }

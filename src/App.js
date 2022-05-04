@@ -7,12 +7,14 @@ import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
 import Inventory from './pages/Home/Inventory/Inventory';
 import Blogs from './pages/Home/Blogs/Blogs'
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
+      <Toaster></Toaster>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

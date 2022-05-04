@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import { AiOutlineMenuUnfold, AiOutlineClose } from "react-icons/ai";
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <h1>Warehouse</h1>
+        <Link to="/"><h1>Warehouse</h1></Link>
       </div>
       <div>
         <nav className={openNav ? " nav-close":"nav-open"}>
