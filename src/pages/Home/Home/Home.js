@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import slider1 from '../../../images/slider1.jpeg'
 import slider2 from '../../../images/slider2.jpeg';
-import slider3 from '../../../images/slider3.jpg';
+import slider3 from '../../../images/slider3.jpeg';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

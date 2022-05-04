@@ -1,0 +1,8 @@
+.signup{
+    background: #353444;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
