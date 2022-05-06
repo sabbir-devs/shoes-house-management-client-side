@@ -8,12 +8,11 @@
     color: #fff;
 }
 .items{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    grid-template-columns: repeat( auto-fill, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     border-radius: 3px;
 }
@@ -25,4 +24,24 @@
 .item img{
     width: 100%;
     border-radius: 3px;
+}
+.item h3{
+    margin-top: 10px;
+}
+.item p{
+    width: 100%;
+    letter-spacing: .5px;
+    color: #ddd;
+}
+.item button{
+    padding: 7px 20px;
+    background: #4335db;
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.item button:hover{
+    box-shadow: 0 0 15px 3px #4335db;
 }
