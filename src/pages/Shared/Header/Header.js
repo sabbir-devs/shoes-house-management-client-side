@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <Link to="/"><h1>Warehouse</h1></Link>
+        <Link to="/"><h1 className="title">Shoes House</h1></Link>
       </div>
       <div>
         <nav className={openNav ? " nav-close":"nav-open"}>

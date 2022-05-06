@@ -5,6 +5,7 @@ import slider2 from '../../../images/slider2.jpeg';
 import slider3 from '../../../images/slider3.jpeg';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Inventory from '../Inventory/Inventory';
 
 const Home = () => {
     return (
@@ -42,6 +43,7 @@ const Home = () => {
                     </Carousel>
                 </div>
             </div>
+            <Inventory></Inventory>
         </div>
     );
 };

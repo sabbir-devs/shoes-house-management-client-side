@@ -1,0 +1,28 @@
+.inventory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4%;
+    background: #000;
+    color: #fff;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    grid-template-columns: repeat( auto-fill, 300px);
+    grid-gap: 20px;
+    border-radius: 3px;
+}
+.item{
+    background: #353444;
+    padding: 15px;
+    border: 2px solid #4136c2;
+}
+.item img{
+    width: 100%;
+    border-radius: 3px;
+}

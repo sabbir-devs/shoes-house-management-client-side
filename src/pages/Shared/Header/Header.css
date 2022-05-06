@@ -11,7 +11,7 @@ a{
 a:hover{
     color: #fff;
 }
-.header h1{
+.header .title{
     background: linear-gradient(to left, #5f4fe4, #c950e5);
     background-clip: text;
     color: transparent;
