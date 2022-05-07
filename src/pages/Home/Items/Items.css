@@ -1,0 +1,30 @@
+.item{
+    background: #353444;
+    padding: 15px;
+    border: 2px solid #4136c2;
+}
+.item img{
+    width: 100%;
+    height: 250px;
+    border-radius: 3px;
+}
+.item h3{
+    margin-top: 10px;
+}
+.item p{
+    width: 100%;
+    letter-spacing: .5px;
+    color: #ddd;
+}
+.item button{
+    padding: 7px 20px;
+    background: #4335db;
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.item button:hover{
+    box-shadow: 0 0 15px 3px #4335db;
+}
