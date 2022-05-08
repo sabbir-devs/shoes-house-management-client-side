@@ -1,10 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Items.css';
 
 const Items = ({shoe}) => {
-  const handleUpdateProduct = () => {
-    console.log('clicked')
-  }
   return (
       <div className="item">
           <img src={shoe.img} alt="" />
@@ -15,7 +13,7 @@ const Items = ({shoe}) => {
           <p title={shoe.description}>
             Description: {shoe.description.slice(0, 130) + "..."}
           </p>
-          <button onClick={() => handleUpdateProduct()}>Update</button>
+          <Link to={`/updateProduct/${shoe._id}`}><button>Update</button></Link>
       </div>
   );
 };

@@ -1,0 +1,17 @@
+.update-product{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    margin: 40px 0;
+    color: #fff;
+    background: #343452;
+}
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #4136c2;
+    background: #353444;
+    padding: 20px;
+}

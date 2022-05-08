@@ -7,7 +7,7 @@ const ManageInventory = () => {
     fetch(`http://localhost:5000/shoes`)
       .then((res) => res.json())
       .then((data) => setShoes(data));
-  }, []);
+  }, [shoes]);
   const handleDeleteProduct = (id) => {
     const procide = window.confirm('Are you sure you want to delete')
     if(procide){
