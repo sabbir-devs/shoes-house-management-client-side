@@ -6,7 +6,7 @@ import Items from "../Items/Items";
 const Inventory = () => {
   const [shoes, setShoes] = useState([]);
   useEffect(() => {
-    fetch("shes.json")
+    fetch("http://localhost:5000/shoes")
       .then((res) => res.json())
       .then((data) => setShoes(data));
   }, []);
