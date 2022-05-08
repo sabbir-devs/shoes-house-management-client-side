@@ -3,15 +3,92 @@
     align-items: center;
     justify-content: center;
     padding: 4%;
-    margin: 40px 0;
     color: #fff;
-    background: #343452;
+    background: #353444;
 }
 .product{
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #4136c2;
-    background: #353444;
     padding: 20px;
+    border-radius: 3px;
+}
+.product-half{
+    width: 50%;
+}
+.product-half img{
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.update-section{
+    margin-left: 20px;
+}
+.update-section h3{
+    font-size: 45px;
+}
+.update-section h4{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.delivered-btn{
+    padding: 7px 15px;
+    border: none;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #4335db;
+    color: #fff;
+}
+.delivered-btn:hover{
+    box-shadow: 0 0 10px 0 #fff;
+}
+.update-section .quantity-form{
+    display: flex;
+    align-items: center;
+}
+.quantity-form .quantity-input{
+    border: none;
+    padding: 7px 15px;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+.quantity-form .quantity-input:focus{
+    outline: none;
+}
+.quantity-form .quantity-input::placeholder{
+    color: #000;
+    font-size: 17px;
+}
+.quantity-form .quantity-submit{
+    padding: 8px 15px ;
+    font-size: 17px;
+    border-radius: 2px;
+    border: none;
+    background: #4335db;
+    color: #fff;
+}
+.quantity-submit:hover{
+    box-shadow: 0 0 10px 0 #fff;
+}
+
+
+
+@media only screen and (max-width:668px) {
+    .product{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .product-half{
+        width: 100%;
+    }
+    .update-section{
+        margin-top: 20px;
+        margin-left: 0;
+    }
 }
