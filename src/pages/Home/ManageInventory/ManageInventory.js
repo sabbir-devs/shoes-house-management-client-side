@@ -12,18 +12,18 @@ const ManageInventory = () => {
     const procide = window.confirm('Are you sure you want to delete')
     if(procide){
         console.log('delete items id', id);
-        // const url = `http://localhost:5000/shoes/${id}`
-        // fetch(url,{
-        //     method:'DELETE',
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     if(data.deleteCount > 0){
-        //         console.log('delete successful');
-        //         const remaining = shoes.filter(shoe => shoe._id !== id);
-        //         setShoes(remaining)
-        //     }
-        // })
+        const url = `http://localhost:5000/shoes/${id}`
+        fetch(url,{
+            method:'DELETE',
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deleteCount > 0){
+                console.log('delete successful');
+                const remaining = shoes.filter(shoe => shoe._id !== id);
+                setShoes(remaining)
+            }
+        })
     }
   }
   return (
