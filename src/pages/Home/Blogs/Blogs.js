@@ -13,7 +13,12 @@ const Blogs = () => {
             </div>
             <div className="blog">
                 <h1>When should you use node js and when should you use mongodb</h1>
-                <p>MongoDB is a database engine. Code within some application or server uses MongoDB to save, query or update data in a database. There are many web servers built with nodejs that will then use MongoDB for storing data.MongoDB offers an API library that runs within a Nodejs application to give you programmatic access to MongoDB so you can create databases and then add, query, update or delete data from the MongoDB database.</p>
+                <p>
+                    Nodejs is a Javascript engine that you can write any application you want with (by programming in the Javascript language). It runs your Javascript code. Most commonly, it is used to build servers that can respond to web requests, though it can be used for lots of other types of code too.
+                </p>
+                <p>
+                    MongoDB is a database engine. Code within some application or server uses MongoDB to save, query or update data in a database. There are many web servers built with nodejs that will then use MongoDB for storing data.
+                </p>
             </div>
             <div className="blog">
                 <h1>Differences between sql and nosql databases.</h1>

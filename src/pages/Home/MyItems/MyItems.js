@@ -11,7 +11,7 @@ const MyItems = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setShoes(data))
-    },[user])
+    },[user, shoes])
     // delete product
     const handleDeleteProduct = (id) => {
         const procide = window.confirm('Are you sure you want to delete')
