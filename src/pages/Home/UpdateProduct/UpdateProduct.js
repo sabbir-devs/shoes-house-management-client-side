@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './UpdateProduct.css'
 
 const UpdateProduct = () => {
+    const navigate = useNavigate();
     const {id} = useParams()
     const [product, setProduct] = useState({});
     useEffect(() => {
@@ -78,6 +79,7 @@ const UpdateProduct = () => {
                         <input className='quantity-input' type="number" name="addQuantity" id="" />
                         <input className='quantity-submit' type="submit" value="Add Quantity" />
                     </form>
+                    <button style={{marginTop:'10px'}} onClick={() => navigate('/manageitems')} className='quantity-submit'>Manage Items</button>
                 </div>
             </div>
         </div>

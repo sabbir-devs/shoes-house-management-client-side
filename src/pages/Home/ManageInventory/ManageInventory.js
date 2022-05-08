@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ManageInventory.css";
 
 const ManageInventory = () => {
+  const navigate = useNavigate()
   const [shoes, setShoes] = useState([]);
   useEffect(() => {
     fetch(`https://mighty-shore-52159.herokuapp.com/shoes`)
@@ -27,7 +29,9 @@ const ManageInventory = () => {
     }
   }
   return (
-    <div className="manage-inventory">
+    <div className="manage-inventorys">
+      <button className="back-btn" onClick={() => navigate('/additems')}>Add Item</button>
+      <div className="manage-inventory">
       {shoes.map((shoe) => (
         <div className="item" key={shoe._id}>
           <img src={shoe.img} alt="" />
@@ -41,6 +45,7 @@ const ManageInventory = () => {
           <button onClick={() => handleDeleteProduct(shoe._id)}>Delete</button>
         </div>
       ))}
+    </div>
     </div>
   );
 };

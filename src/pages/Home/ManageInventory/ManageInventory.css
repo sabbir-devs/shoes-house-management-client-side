@@ -1,3 +1,7 @@
+.manage-inventorys{
+    background: #27273b; 
+    padding: 4%;
+}
 .manage-inventory{
     display: grid;
     align-items: center;
@@ -8,11 +12,21 @@
     border-radius: 3px;
     background: #27273b;
     color: #fff;
-    padding: 4%;
 }
 .item button{
     background: rgb(255, 0, 0);
 }
 .item button:hover{
     box-shadow: 0 0 10px 0 red;
+}
+.back-btn{
+    padding: 8px 15px ;
+    font-size: 17px;
+    border-radius: 2px;
+    border: none;
+    background: #4335db;
+    color: #fff;
+}
+.back-btn:hover{
+    box-shadow: 0 0 10px 0 #fff;
 }
