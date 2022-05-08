@@ -6,13 +6,12 @@ import './UpdateProduct.css'
 const UpdateProduct = () => {
     const {id} = useParams()
     const [product, setProduct] = useState({});
-
     useEffect(() => {
         const url = `http://localhost:5000/shoes/${id}`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
-    },[id])
+    },[id, product])
     // add quantity by form
     const addQuantity = event => {
         event.preventDefault()
@@ -22,7 +21,7 @@ const UpdateProduct = () => {
             const totalQuantity = parseInt(product.quantity) + newQuantity;
             console.log(totalQuantity);
             const id = product._id;
-            const totalSold = parseInt(product.solld) + 0;
+            const totalSold = parseInt(product.solld);
             const update = {id, totalQuantity, totalSold}
 
             const url = `http://localhost:5000/shoes/${id}`
@@ -40,7 +39,24 @@ const UpdateProduct = () => {
         }
     }
     const handleDeliveredItem = () => {
-
+        if(product.quantity > 0){
+            const totalQuantity = parseInt(product.quantity) - 1 ;
+            const id = product._id;
+            const totalSold = parseInt(product.solld) + 1;
+            const update = { id, totalQuantity, totalSold};
+            
+            const url = `http://localhost:5000/shoes/${id}`;
+            fetch(url,{
+                method: "PUT",
+                headers: {"content-type": "application/json"},
+                body: JSON.stringify(update),
+            })
+            .then(res  => res.json())
+            .then(data => {
+                console.log(data)
+                toast.success("Shoes Delivered Successful")
+            })
+        }
     }
     return (
         <div className='update-product'>
