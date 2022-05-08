@@ -19,7 +19,6 @@ const UpdateProduct = () => {
         if(proside){
             const newQuantity = parseInt(event.target.addQuantity.value);
             const totalQuantity = parseInt(product.quantity) + newQuantity;
-            console.log(totalQuantity);
             const id = product._id;
             const totalSold = parseInt(product.solld);
             const update = {id, totalQuantity, totalSold}
@@ -32,9 +31,11 @@ const UpdateProduct = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 event.target.reset();
                 toast.success('Stock update successful', {id:'toast2'})
+            })
+            .catch((error) => {
+                console.error('Error', error)
             })
         }
     }
@@ -53,8 +54,10 @@ const UpdateProduct = () => {
             })
             .then(res  => res.json())
             .then(data => {
-                console.log(data)
                 toast.success("Shoes Delivered Successful")
+            })
+            .catch((error) => {
+                console.error('Error', error)
             })
         }
     }
