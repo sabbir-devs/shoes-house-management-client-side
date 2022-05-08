@@ -1,0 +1,18 @@
+.manage-inventory{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    border-radius: 3px;
+    background: #27273b;
+    color: #fff;
+    padding: 4%;
+}
+.item button{
+    background: rgb(255, 0, 0);
+}
+.item button:hover{
+    box-shadow: 0 0 10px 0 red;
+}
