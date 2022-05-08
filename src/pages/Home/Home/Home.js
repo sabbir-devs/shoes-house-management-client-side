@@ -8,8 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Inventory from '../Inventory/Inventory';
 import OnlineService from '../OnlineService/OnlineService';
 import ManegmentWarehouse from '../ManegmentWarehouse/ManegmentWarehouse';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Home = () => {
+    const [user, loading] = useAuthState(auth);
+    if(loading){
+        return <Loading></Loading>
+    }
     return (
         <div className='home'>
             <div className="top-banner">
