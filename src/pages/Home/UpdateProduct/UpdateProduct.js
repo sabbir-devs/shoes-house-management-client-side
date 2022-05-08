@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     const {id} = useParams()
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/shoes/${id}`
+        const url = `https://mighty-shore-52159.herokuapp.com/shoes/${id}`
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -23,7 +23,7 @@ const UpdateProduct = () => {
             const totalSold = parseInt(product.solld);
             const update = {id, totalQuantity, totalSold}
 
-            const url = `http://localhost:5000/shoes/${id}`
+            const url = `https://mighty-shore-52159.herokuapp.com/shoes/${id}`
             fetch(url,{
                 method: "PUT",
                 headers: {"content-type": "application/json"},
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
             const totalSold = parseInt(product.solld) + 1;
             const update = { id, totalQuantity, totalSold};
             
-            const url = `http://localhost:5000/shoes/${id}`;
+            const url = `https://mighty-shore-52159.herokuapp.com/shoes/${id}`;
             fetch(url,{
                 method: "PUT",
                 headers: {"content-type": "application/json"},

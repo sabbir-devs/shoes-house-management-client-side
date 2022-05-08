@@ -19,7 +19,7 @@ const AddItem = () => {
         const description = event.target.description.value;
         const newProduct = {img, name, email, price, quantity, solld, seller, description};
 
-        fetch('http://localhost:5000/shoes', {
+        fetch('https://mighty-shore-52159.herokuapp.com/shoes', {
             method:'POST',
             headers:{
                 "content-type": "application/json"
