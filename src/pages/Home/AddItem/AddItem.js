@@ -10,23 +10,21 @@ const AddItem = () => {
     const handleAddItems = event => {
         event.preventDefault();
         const img = event.target.imgUrl.value;
-        const productName = event.target.productName.value;
+        const name = event.target.name.value;
         const email = user.email;
         const price = event.target.price.value;
         const quantity = event.target.quantity.value;
         const solld = event.target.sold.value;
-        const name = event.target.name.value;
+        const seller = event.target.supplierName.value;
         const description = event.target.description.value;
-        const newProduct = {img, productName, email, price, quantity, solld, name, description};
-        console.log(newProduct)
+        const newProduct = {img, name, email, price, quantity, solld, seller, description};
 
-        const url = `'http://localhost:5000/shoes'`
-        fetch(url, {
-            method:"POST",
+        fetch('http://localhost:5000/shoes', {
+            method:'POST',
             headers:{
                 "content-type": "application/json"
             },
-            body: JSON.stringify(newProduct),
+            body: JSON.stringify(newProduct)
         })
         .then(res => res.json())
         .then(data => {
@@ -42,14 +40,14 @@ const AddItem = () => {
         <div className='add-item'>
             <div className="item-add-form">
                 <form onSubmit={handleAddItems} className='form'>
-                    <input className='adding-inputs' type="text" name="imgUrl" placeholder='Photo Url' id="" />
-                    <input className='adding-inputs' type="text" name="productName" placeholder='Product Name' id="" />
+                    <input className='adding-inputs' type="text" name="imgUrl" placeholder='Photo Url' id="" required/>
+                    <input className='adding-inputs' type="text" name="name" placeholder='Product Name' id="" required/>
                     <input className='adding-inputs' type="email" name="email" placeholder={user.email} id="" readOnly/>
-                    <input className='adding-inputs' type="number" name="price" placeholder='Price' id="" />
-                    <input className='adding-inputs' type="number" name="quantity" placeholder='Quantity' id="" />
-                    <input className='adding-inputs' type="number" name="sold" placeholder='Sold' id="" />
-                    <input className='adding-inputs' type="text" name="name" placeholder='Supplier Name' id="" />
-                    <textarea className='adding-inputs' name="description" placeholder='Shor Description' id=""></textarea>
+                    <input className='adding-inputs' type="number" name="price" placeholder='Price' id="" required/>
+                    <input className='adding-inputs' type="number" name="quantity" placeholder='Quantity' id="" required/>
+                    <input className='adding-inputs' type="number" name="sold" placeholder='Sold' id="" required/>
+                    <input className='adding-inputs' type="text" name="supplierName" placeholder='Supplier Name' id="" required/>
+                    <textarea className='adding-inputs' name="description" placeholder='Shor Description' id="" required></textarea>
                     <input className='add-btn' type="submit" value="Add" />
                 </form>
             </div>

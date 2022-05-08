@@ -13,7 +13,7 @@ const Items = ({shoe}) => {
           <p title={shoe.description}>
             Description: {shoe.description.slice(0, 130) + "..."}
           </p>
-          <Link to={`/updateProduct/${shoe._id}`}><button>Update</button></Link>
+          <Link to={`/updateProduct/${shoe._id}`}><button style={{background:'#4335db'}}>Update</button></Link>
       </div>
   );
 };
